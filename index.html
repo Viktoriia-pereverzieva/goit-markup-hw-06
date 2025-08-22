@@ -11,9 +11,11 @@
         <link href='https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap'
             rel='stylesheet' >
         <link rel="stylesheet" href="./css/styles.css">
+    
     <title>Document</title>
 </head>
 <body>
+    <div class="conteiner-main"></div>
     <header class="header">
         <div class="container">
             <nav class="nav">
@@ -30,10 +32,75 @@
                     <li><a href="tel:+110001111111" class="addr">+11 (000) 111-11-11</a></li>
                 </ul>
             </address>
+
+            <button class="burger-btn">
+                <svg class="burger-icon" width="24" height="24">
+                  <use href="./images/icons.svg#icon-heroicons-solid_menu"></use>
+                </svg>
+            </button>
         </div>
+
+        <div class="mobile-menu is-open">
+            <div class="container mobile-menu-container">
+            <button class="mobile-menu-close" type="button"> 
+                    <svg class="svg-b-menu" width="8" height="8">
+                        <use href="./images/icons.svg#icon-close"></use>
+                    </svg>
+                </button>    
+            </button>
+            <nav class="mobile-menu-nav">
+                <ul class="menu-nav">
+                    <li><a href="./index.html" class="link act">Studio</a></li>
+                    <li><a href="" class="link">Portfolio</a></li>
+                    <li><a href="" class="link">Contacts</a></li>
+                </ul>
+            </nav> 
+            <div class="address-svg-menu">
+            <address class="menu-address">
+                <ul class="contact">
+                    <li><a href="mailto:info@devstudio.com" class="addr">info@devstudio.com</a></li>
+                    <li><a href="tel:+110001111111" class="addr">+11 (000) 111-11-11</a></li>
+                </ul>
+            </address>
+                <ul class="menu-svg">
+                    <li class="svg-li">
+                        <a href="" class="m-svg">
+                            <svg class="iconsm" width="24" height="24">
+                                <use href="./images/icons.svg#icon-instagram"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="svg-li">
+                        <a href="" class="m-svg">
+                            <svg class="iconsm" width="24" height="24">
+                                <use href="./images/icons.svg#icon-twitter"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="svg-li">
+                        <a href="" class="m-svg">
+                            <svg class="iconsm" width="24" height="24">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="svg-li">
+                        <a href="" class="m-svg">
+                            <svg class="iconsm" width="24" height="24">
+                                <use href="./images/icons.svg#icon-linkedin"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div></div>
+            </div>
+            </div>
+            
+
     </header>
 
-    <main>
+     <main>
         <section class="title">
             <div class="container">
                 <h1 class="htitle">Effective Solutions for Your Business</h1>
@@ -89,7 +156,7 @@
                 <h2 class="our-team">Our Team</h2>
                 <ul class="our-t-list">
                     <li class="team-list">
-                        <img src="./images/Mark.jpg" alt="Mark Guerrero" class="img" width="264" height="260">
+                        <img srcset="./images/Mark.jpg, ./images/Mark@2x.jpg 2x" src="./images/Mark.jpg" alt="Mark Guerrero" class="img" width="264" height="260">
                         <div class="descr">
                             <h3 class="name-team">Mark Guerrero</h3>
                             <p class="position-team">Product Designer</p>
@@ -128,7 +195,7 @@
                         </div>
                     </li>
                     <li class="team-list">
-                        <img src="./images/Tom.jpg" alt="Tom Ford" class="img" width="264" height="260">
+                        <img srcset="./images/Tom.jpg, ./images/Tom@2x.jpg 2x"  src="./images/Tom.jpg" alt="Tom Ford" class="img" width="264" height="260">
                         <div class="descr">
                             <h3 class="name-team">Tom Ford</h3>
                             <p class="position-team">Frontend Developer</p>
@@ -167,7 +234,7 @@
                         </div>
                     </li>
                     <li class="team-list">
-                        <img src="./images/Camila.jpg" alt="Camila Garcia" class="img" width="264" height="260">
+                        <img srcset="./images/Camila.jpg, ./images/Camila@2x.jpg 2x"  src="./images/Camila.jpg" alt="Camila Garcia" class="img" width="264" height="260">
                         <div class="descr">
                             <h3 class="name-team">Camila Garcia</h3>
                             <p class="position-team">Marketing</p>
@@ -207,7 +274,7 @@
                     
                     </li>
                     <li class="team-list">
-                        <img src="./images/Daniel.jpg" alt="Daniel Wilson" class="img" width="264" height="260">
+                        <img srcset="./images/Daniel.jpg, ./images/Daniel@2x.jpg 2x"  src="./images/Daniel.jpg" alt="Daniel Wilson" class="img" width="264" height="260">
                         <div class="descr">
                             <h3 class="name-team">Daniel Wilson</h3>
                             <p class="position-team">UI Designer</p>
@@ -253,7 +320,19 @@
                 <ul class="our-p-list">
                     <li class="choice-portf">
                         <div class="img-portf">
-                        <img src="./images/Banking-app.jpg" alt="Banking App" width="360">
+                            <picture>
+                                <source
+                                media="(min-width: 1158px)"
+                                srcset="./images/port-desk1-min.jpg 1x, ./images/port-desk1@2x-min.jpg 2x" />
+                                <source 
+                                media="(min-width: 768px)"
+                                srcset="./images/port-tab1-min.jpg 1x, ./images/port-tab1@2x-min.jpg 2x" />
+                                <source
+                                media="(max-width: 767px)"
+                                srcset="./images/port1.jpg 1x, ./images/port1@2x.jpg 2x" />
+
+                                <img src="./images/port-desk1-min.jpg" alt="Banking-app">
+                            </picture>
                         <p class="par-portf">
                             14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce App ·
                             Cloud Storage App
@@ -267,7 +346,20 @@
                     </li>
                     <li class="choice-portf">
                         <div class="img-portf">
-                        <img src="./images/Cashless-payment.jpg" alt="Cashless Payment" width="360">
+                            <picture>
+                                <source
+                                media="(min-width: 1158px)"
+                                srcset="./images/port-desk2-min.jpg 1x, ./images/port-desk2@2x-min.jpg 2x" />
+                                <source 
+                                media="(min-width: 768px)"
+                                srcset="./images/port-tab2-min.jpg 1x, ./images/port-tab2@2x-min.jpg 2x" />
+                                <source
+                                media="(max-width: 767px)"
+                                srcset="./images/port2.jpg 1x, ./images/port2@2x.jpg 2x" />
+
+                                <img src="./images/port-desk2-min.jpg" alt="Cashless-payment">
+                            </picture>
+                        
                         <p class="par-portf">
                             14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                             App ·
@@ -281,7 +373,19 @@
                     </li>
                     <li class="choice-portf">
                         <div class="img-portf">
-                        <img src="./images/Meditation-app.jpg" alt="Meditation App" width="360">
+                            <picture>
+                                <source
+                                media="(min-width: 1158px)"
+                                srcset="./images/port-desk3-min.jpg 1x, ./images/port-desk3@2x-min.jpg 2x" />
+                                <source 
+                                media="(min-width: 768px)"
+                                srcset="./images/port-tab3-min.jpg 1x, ./images/port-tab3@2x-min.jpg 2x" />
+                                <source
+                                media="(max-width: 767px)"
+                                srcset="./images/port3.jpg 1x, ./images/port3@2x.jpg 2x" />
+
+                                <img src="./images/port-desk3-min.jpg" alt="Meditation-app">
+                            </picture>
                         <p class="par-portf">
                             14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                             App ·
@@ -295,7 +399,19 @@
                     </li>
                     <li class="choice-portf">
                         <div class="img-portf">
-                        <img src="./images/Taxi-service.jpg" alt="Taxi Service" width="360">
+                            <picture>
+                                <source
+                                media="(min-width: 1158px)"
+                                srcset="./images/port-desk4-min.jpg 1x, ./images/port-desk4@2x-min.jpg 2x" />
+                                <source 
+                                media="(min-width: 768px)"
+                                srcset="./images/port-tab4-min.jpg 1x, ./images/port-tab4@2x-min.jpg 2x" />
+                                <source
+                                media="(max-width: 767px)"
+                                srcset="./images/port4.jpg 1x, ./images/port4@2x.jpg 2x" />
+
+                                <img src="./images/port-desk4-min.jpg" alt="Taxi-service">
+                            </picture>
                         <p class="par-portf">
                             14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                             App ·
@@ -309,7 +425,19 @@
                     </li>
                     <li class="choice-portf">
                         <div class="img-portf">
-                            <img src="./images/Screen-illustrations.jpg" alt="Screen Illustrations" width="360">
+                            <picture>
+                                <source
+                                media="(min-width: 1158px)"
+                                srcset="./images/port-desk5-min.jpg 1x, ./images/port-desk5@2x-min.jpg 2x" />
+                                <source 
+                                media="(min-width: 768px)"
+                                srcset="./images/port-tab5-min.jpg 1x, ./images/port-tab5@2x-min.jpg 2x" />
+                                <source
+                                media="(max-width: 767px)"
+                                srcset="./images/port5.jpg 1x, ./images/port5@2x.jpg 2x" />
+
+                                <img src="./images/port-desk5-min.jpg" alt="Screen-illustrations">
+                            </picture>
                             <p class="par-portf">
                                 14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                                 App ·
@@ -323,7 +451,19 @@
                     </li>
                     <li class="choice-portf">
                         <div class="img-portf">
-                            <img src="./images/Online-courses.jpg" alt="Online Courses" width="360">
+                            <picture>
+                                <source
+                                media="(min-width: 1158px)"
+                                srcset="./images/port-desk6-min.jpg 1x, ./images/port-desk6@2x-min.jpg 2x" />
+                                <source 
+                                media="(min-width: 768px)"
+                                srcset="./images/port-tab6-min.jpg 1x, ./images/port-tab6@2x-min.jpg 2x" />
+                                <source
+                                media="(max-width: 767px)"
+                                srcset="./images/port6.jpg 1x, ./images/port6@2x.jpg 2x" />
+
+                                <img src="./images/port-desk6-min.jpg" alt="Online-courses">
+                            </picture>
                             <p class="par-portf">
                                 14 Stylish and User-Friendly App Design Concepts · Task Manager App · Calorie Tracker App · Exotic Fruit Ecommerce
                                 App ·
@@ -338,9 +478,9 @@
                 </ul>
             </div>
         </section>
-        
     </main>
 
+    
     <footer class="footer">
         <div class="container contant-foot">
             <div class="container-box">
@@ -383,20 +523,19 @@
             <div class="subscribe">
                 <p class="p-sub"> Subscribe </p>
                 <form class="form-footer">
-                    
                         <label class="label-form-footer">
                             <input type="email" class="input-text" name="email" placeholder="E-mail" >
                         </label>
-                            <button type="submit" class="but-form"> 
+            
+                        <button type="submit" class="but-form"> 
                             Subscribe 
                             <svg class="sub-svg" width="24" height="24">
                                 <use href="./images/icons.svg#icon-Frame"></use>
                             </svg>
-                        
                         </button>
                       
-                </form>
-            </div>
+            </form>
+            </div>  
         </div>
 
     </footer>
@@ -423,9 +562,8 @@
                         
                     </div>
                     <div class="forma-footer">
-                        
-                            <label for="phone" class="l-label"> Phone </label>
-                            <div class="input-wrapper">
+                        <label for="phone" class="l-label"> Phone </label>
+                        <div class="input-wrapper">
                             <input type="tel" name="phone" id="phone" class="i-input">
                             <svg class="svg-class" width="18" height="24">
                             <use href="./images/icons.svg#icon-phone"></use>
